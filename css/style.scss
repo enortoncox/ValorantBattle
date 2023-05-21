@@ -1,0 +1,339 @@
+$primary-color: #e7ad99;
+$secondary-color: #ecc8af;
+$btn-dark: #495867;
+$btn-darker: #262d35;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  background-color: #ce796b;
+}
+
+// UTILITIES //
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.btn {
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  border: none;
+  background-color: $btn-dark;
+  color: #fff;
+  border: 2px solid #000;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $btn-darker;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box {
+  background-color: $secondary-color;
+  border: 3px solid #000;
+  color: #000;
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// HEADER //
+.main-header {
+  height: 50px;
+  padding: 2rem;
+  background-color: $primary-color;
+  border-bottom: 3px solid #000;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+// SHOWCASE //
+.showcase {
+  margin: 2rem;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+// Players //
+.player-container {
+  height: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 85px;
+
+  header {
+    height: 100%;
+    padding: 0.8rem;
+    background-color: $primary-color;
+    border-bottom: 3px solid #000;
+
+    span {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  footer {
+    height: 100%;
+    border-top: 3px solid #000;
+    background-color: $primary-color;
+  }
+
+  .agents-list {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0 0.8rem;
+  }
+
+  .agent-list-item {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: $btn-dark;
+    color: #fff;
+    margin: 0.5rem 0;
+
+    &:hover {
+      background-color: $btn-darker;
+    }
+  }
+
+  .agentsDiv{
+    padding: 0.6rem;
+  }
+
+  .damaged {
+    color: #cf0721;
+    font-weight: bold;
+  }
+
+  .selected {
+    background-color: $btn-darker;
+  }
+
+  .in-combat {
+    background-color: #eb4157;
+    color: #fff;
+  }
+
+  .endGameText {
+    font-size: 10rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+}
+
+// Player 1 //
+.p1-container {
+  margin-right: 1rem;
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+// Player 2 //
+.p2-container {
+  margin-left: 1rem;
+  grid-column: 3;
+  grid-row: 1 / 4;
+}
+
+// Arena //
+.arena {
+  height: 100%;
+  grid-column: 2;
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 250px 300px 85px;
+
+  header {
+    padding: 1rem;
+    background-color: $primary-color;
+    grid-column: span 2;
+    grid-row: 1 / 2;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.agent-info {
+  height: 100%;
+  text-align: center;
+  grid-column: span 1;
+  grid-row: 2 / 3;
+  background-color: $primary-color;
+  border-bottom: 3px solid #000;
+  flex-direction: column;
+  padding: 1rem;
+
+  .stats-container {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+  }
+
+  img {
+    margin-top: 1rem;
+    height: 100%;
+    max-height: 100px;
+  }
+}
+
+.battle {
+  height: 100%;
+  text-align: center;
+  grid-column: span 2;
+  font-size: 1.2rem;
+  grid-row: 3 / 4;
+  flex-direction: column;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 100px 1fr;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .verses-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    span {
+      font-size: 2rem;
+      align-self: center;
+    }
+
+    .vs-text-p1 {
+      justify-self: flex-end;
+      font-weight: bold;
+      font-size: 2.2rem;
+    }
+
+    .vs-text-p2 {
+      justify-self: flex-start;
+      font-weight: bold;
+      font-size: 2.2rem;
+    }
+  }
+
+  .battle-result {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.controls {
+  height: 100%;
+  justify-content: space-around;
+  border-top: 3px solid #000;
+  text-align: center;
+  grid-column: span 2;
+  grid-row: 4 / 5;
+  padding: 1rem;
+  background-color: $primary-color;
+}
+
+.gameover {
+  display: none;
+}
+
+@media (max-width: 1025px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+  }
+
+  .p1-container {
+    margin: 0;
+    grid-column: 1;
+    grid-row: 2 / 4;
+
+    #agentsDivP1, #endGameDivP1{
+      padding: 1rem;
+    }
+  }
+
+  .p2-container {
+    margin: 0;
+    grid-column: 2;
+    grid-row: 2 / 4;
+
+    #agentsDivP2, #endGameDivP2{
+      padding: 1rem;
+    }
+  }
+
+  .arena {
+    grid-column: span 2;
+    grid-row: 1;
+    grid-template-rows: 100px 300px 300px 85px;
+  }
+
+  .battle{
+    .battle-result {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+
+  .agent-info{
+    padding: 2rem;
+
+    .stats-container{
+      text-align: center;
+    }
+
+    img {
+      margin: 1rem 0;
+      height: 100%;
+      max-height: 150px;
+    }
+  }
+}

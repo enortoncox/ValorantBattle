@@ -1,0 +1,22 @@
+//An array containing the name, role and imgName of each agent
+export const allAgentsData = [
+    { name: "Astra", role: "Controller", imgName: "astra.webp" },
+    { name: "Breach", role: "Initiator", imgName: "breach.webp" },
+    { name: "Brimstone", role: "Controller", imgName: "brimstone.webp" },
+    { name: "Chamber", role: "Sentinel", imgName: "chamber.webp" },
+    { name: "Cypher", role: "Sentinel", imgName: "cypher.webp" },
+    { name: "Fade", role: "Initiator", imgName: "fade.webp" },
+    { name: "Jett", role: "Duelist", imgName: "jett.webp" },
+    { name: "KAYO", role: "Initiator", imgName: "kayo.webp" },
+    { name: "Killjoy", role: "Sentinel", imgName: "killjoy.webp" },
+    { name: "Neon", role: "Duelist", imgName: "neon.webp" },
+    { name: "Omen", role: "Controller", imgName: "omen.webp" },
+    { name: "Phoenix", role: "Duelist", imgName: "phoenix.webp" },
+    { name: "Raze", role: "Duelist", imgName: "raze.webp" },
+    { name: "Reyna", role: "Duelist", imgName: "reyna.webp" },
+    { name: "Sage", role: "Sentinel", imgName: "sage.webp" },
+    { name: "Skye", role: "Initiator", imgName: "skye.webp" },
+    { name: "Sova", role: "Initiator", imgName: "sova.webp" },
+    { name: "Viper", role: "Controller", imgName: "viper.webp" },
+    { name: "Yoru", role: "Duelist", imgName: "yoru.webp" },
+  ];

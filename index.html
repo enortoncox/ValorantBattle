@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Valorant Battle</title>
+</head>
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container flex">
+            <h1 class="text-center">VALORANT BATTLE</h1>
+        </div>
+    </header>
+
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="game-container">
+
+                <!-- Player 1 -->
+                <div class="player-container p1-container box">
+                    <header>
+                        <h2>Player 1</h2>
+                        <span id="agentsRemainingTextP1">Agents: 0</span>
+                    </header>
+                    <div id="agentsDivP1" class="agentsDiv">
+                        <h3>Agents</h3>
+                        <ul class="agents-list" id="agentsListElementP1"></ul>
+                    </div>
+                    <div id="endGameDivP1" class="flex gameover">
+                        <p id="endGameTextP1" class="endGameText">LOSE</p>
+                    </div>
+                    <footer class="flex">
+                        <button class="btn" id="randomAgentBtnP1">Random Agent</button>
+                    </footer>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player-container p2-container box">
+                    <header>
+                        <h2>Player 2</h2>
+                        <span id="agentsRemainingTextP2">Agents: 0</span>
+                    </header>
+                    <div id="agentsDivP2" class="agentsDiv">
+                        <h3>Agents</h3>
+                        <ul class="agents-list" id="agentsListElementP2"></ul>
+                    </div>
+                    <div id="endGameDivP2" class="flex gameover">
+                        <p id="endGameTextP2" class="endGameText">LOSE</p>
+                    </div>
+                    <footer class="flex">
+                        <button class="btn" id="randomAgentBtnP2">Random Agent</button>
+                    </footer>
+                </div>
+
+                <!-- Arena -->
+                <div class="arena box">
+                    <header class="flex">
+                        <h2>Arena</h2>
+                        <p>Battle Between Two Agents</p>
+                    </header>
+
+                    <!-- P1 Agent Info -->
+                    <div class="agent-info flex">
+                        <h2 class="text-center">Player 1 Agent</h2>
+                        <div class="stats-container">
+                            <p id="agentNameTextP1">Name:</p>
+                            <p id="agentRoleTextP1">Role:</p>
+                        </div>
+                        <img src="/images/valorant_logo.png" alt="" id="agentImageP1">
+                    </div>
+
+                    <!-- P2 Agent Info -->
+                    <div class="agent-info flex">
+                        <h2 class="text-center">Player 2 Agent</h2>
+                        <div class="stats-container">
+                            <p id="agentNameTextP2">Name:</p>
+                            <p id="agentRoleTextP2">Role:</p>
+                        </div>
+                        <img src="/images/valorant_logo.png" alt="" id="agentImageP2">
+                    </div>
+
+                    <!-- Battle -->
+                    <!-- Active Battle -->
+                    <div id="battle" class="battle">
+                        <h2>Battle!</h2>
+
+                        <div class="verses-container">
+                            <span id="agentNameVsTextP1" class="vs-text-p1">Unselected</span>
+                            <span>VS</span>
+                            <span id="agentNameVsTextP2" class="vs-text-p2">Unselected</span>
+                        </div>
+
+                        <h3 class="battle-result flex" id="battleResultText">Choose your Agents!</h3>
+                    </div>
+
+                    <!-- Gameover Battle -->
+                    <div id="gameOverBattle" class="battle flex gameover">
+                        <h2>Battle!</h2>
+
+                        <h2 id="gameOverBattleText">Player 2 Wins</h2>
+                        <div>
+                            <button id="newGameBtn" class="btn">New Game?</button>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="controls flex">
+                        <button class="btn" id="battleBtn">Start Battle</button>
+                        <button class="btn" id="simBattleBtn">Simulated Battle</button>
+                        <button class="btn" id="resetBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="/player.js"></script>
+    <script type="module" src="/agentsData.js"></script>
+    <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>
