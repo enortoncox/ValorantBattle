@@ -1,4 +1,4 @@
-# valorant-battle
+# Valorant Battle
 Valorant Battle is a two player battle game made with HTML, SCSS and Javascript. The theme of the game is based on the video game Valorant. 
 Each player selects an agent and then they battle it out. Once all of a player's agents have been defeated they lose. The "Simulated Battle" mode lets the game play itself, so you can watch the battles unfold.
 Each agent is given a random strength score when created. The agent with the higher strength score wins. Once an agent wins, their strength score is decreased as they have taken damage from the battle.
